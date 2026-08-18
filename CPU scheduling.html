@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            table-layout: fixed;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            width: 16.66%;
+            height: 55px;
+            vertical-align: middle;
+            word-wrap: break-word;
+        }
+
+        .my-table {
+            margin-bottom: 0;
+        }
+
+        /* Gantt chart process row */
+        .gantt-process td {
+            border: 1px solid black;
+            height: 55px;
+        }
+
+        /* Time row - no borders, numbers positioned at left edge of each cell */
+        tr.gn td {
+            border: none !important;
+            text-align: left;
+            padding: 0;
+            margin: 0;
+            height: auto;
+            position: relative;
+        }
+
+        .gn td pre {
+            margin: 0;
+            padding: 0;
+            font-family: inherit;
+            font-size: inherit;
+            position: absolute;
+            left: -8px;
+            top: 2px;
+        }
+
+        /* First time cell - number at very left edge */
+        .gn td:first-child pre {
+            left: 0;
+        }
+
+        /* Average row */
+        tr.ave td {
+            border-top: none;
+            border-bottom: none;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            text-align: right;
+            padding-right: 5px;
+            height: 30px;
+        }
+
+        tr.ave td:first-child {
+            border-left: none;
+        }
+
+        tr.ave td:last-child {
+            border-right: none;
+        }
+
+        tr.ave td:empty {
+            border: none !important;
+        }
+
+        h2 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <table class="my-table">
+        <tr>
+            <th>Process</th>
+            <th>AT</th>
+            <th>BT</th>
+            <th>CT</th>
+            <th>TAT</th>
+            <th>WT</th>
+        </tr>
+        <tr>
+            <td>P1</td>
+            <td>4</td>
+            <td>5</td>
+            <td>10</td>
+            <td>6</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>P2</td>
+            <td>2</td>
+            <td>3</td>
+            <td>5</td>
+            <td>3</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>P3</td>
+            <td>5</td>
+            <td>2</td>
+            <td>12</td>
+            <td>7</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>P4</td>
+            <td>15</td>
+            <td>4</td>
+            <td>19</td>
+            <td>4</td>
+            <td>0</td>
+        </tr>
+        <tr class="ave">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>ave: 5</td>
+            <td>ave: 3</td>
+        </tr>
+    </table>
+
+    <h2>Gantt Chart</h2>
+    <table class="my-table">
+        <tr class="gantt-process">
+            <td>Idle</td>
+            <td>P2</td>
+            <td>P1</td>
+            <td>P3</td>
+            <td>Idle</td>
+            <td>P4</td>
+        </tr>
+        <tr class="gn">
+            <td><pre>0</pre></td>
+            <td><pre>2</pre></td>
+            <td><pre>5</pre></td>
+            <td><pre>10</pre></td>
+            <td><pre>12</pre></td>
+            <td><pre>15</pre></td>
+            <td><pre>19</pre></td>
+        </tr>
+    </table>
+</body>
+</html>

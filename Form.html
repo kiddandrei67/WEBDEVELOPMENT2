@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>form</title>
+    </head>
+    <body>
+      <h1>Student information form</h1>
+      <p>Senior High School Enrollment--Grade11</p>
+              <fieldset>
+          <legend>student information</legend>
+        <form action="Save.html" method="GET" target="_blank">
+            <label>First name:</label>
+            <input type="text" name="Uname" required>
+            <label>last name:</label>
+            <input type="text" name="lname" required>
+            <label>middle initial:</label>
+            <input type="text" name="mname" required><br>
+            <label>Email Address</label>
+            <input type="email" name="eml"  required>
+            <label>password</label>
+            <input type="password" name="pass" maxlenght="8" minilelght="5" required>
+            <label>Age</label>
+            <input type="number" name="age" required>
+            <label>Birthday:</label>
+            <input type="date" name="birthday" required><br>
+            <label>Contact number</label>
+            <input type="number" name="contact no" required>
+            <label>Document</label>
+            <input type="file" name="doc" required><br>
+                    </fieldset>
+                    
+                            <fieldset>
+          <legend>student information</legend>
+          <label>Student Id</label>
+            <input type="number" name="s id" required><br>
+             <label>Grade Level</label>
+            <select name="grd">
+              <option>Select your Grade Level</option>
+               <option>Grade 11</option>
+                <option>Grade 12</option>
+            </select>
+
+            <label>Strand</label>
+            <select name="str">
+              <option>Select your Strand</option>
+               <option>CPT</option>
+                <option>HA</option>
+                 <option>HTM</option>
+                  <option>ENG</option>
+                   <option>CAH</option>
+                    <option>SSM</option>
+            </select>
+            </fieldset>
+          <fieldset>
+            <legend>Additional information</legend
+            <label>Gender</label><br>
+            <input type="radio" name="gnd" required> 
+            <label>Male</label>
+               <input type="radio" name="gnd" required>
+               <label>Female</label>
+                  <input type="radio" name="gnd" required>
+               <label>Prefer not to say</label>
+                        <input type="radio" name="gnd" required> <br>
+                <label>Hobbies</label><br>
+            
+               <input type="checkbox" name="hb" required>
+               <label>Reading</label>
+                              <input type="checkbox" name="hb" required>
+               <label>Coding</label>
+                  <input type="checkbox" name="hb" required>
+               <label>Playing Sports</label>
+            <input type="checkbox" name="hb" required>
+            <label>Watching Movies</label>
+               <input type="checkbox" name="hb" required>
+               <label>Playing Games</label>
+                  <input type="checkbox" name="hb" required>
+               <label>Music</label><br>
+               
+               <label>Complete address</label><br>
+              <textarea name="address" row="10" cols="12">address</textarea>
+          </fieldset>
+          <input type="submit" value="submit">
+          <button type="reset">Reset</button>
+        </form>
+    </body>
+</html>
+
